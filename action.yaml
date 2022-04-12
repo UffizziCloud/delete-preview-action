@@ -1,0 +1,35 @@
+name: 'Delete Uffizzi Preview'
+description: 'Delete a deployed Preview from Uffizzi'
+author: 'Adam Vollrath'
+# branding:
+#   color: 'yellow'
+#   icon: 'upload-cloud'
+inputs:
+  id:
+    description: 'Deployment ID string'
+    required: true
+  server:
+    description: 'URL to Uffizzi'
+    required: false
+    default: 'https://app.uffizzi.com'
+  username:
+    description: 'Uffizzi username'
+    required: true
+  password:
+    description: 'Uffizzi password'
+    required: true
+  project:
+    description: 'Uffizzi project name'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://uffizzi/cli:v0.5.0'
+  args:
+    - 'preview'
+    - 'delete'
+    - ${{ inputs.id }}
+  env:
+    UFFIZZI_PASSWORD: ${{ inputs.password }}
+    UFFIZZI_SERVER: ${{ inputs.server }}
+    UFFIZZI_USER: ${{ inputs.username }}
+    UFFIZZI_PROJECT: ${{ inputs.project }}
