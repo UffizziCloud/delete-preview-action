@@ -23,7 +23,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://uffizzi/cli:v0.5.0'
+  image: 'docker://uffizzi/cli:2022-04-12'
   args:
     - 'preview'
     - 'delete'
