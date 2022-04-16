@@ -1,9 +1,9 @@
 name: 'Delete Preview Environment'
 description: 'Delete a Full-Stack Preview Environment (on-demand, ephemeral) with Uffizzi Open Source (Compose + Uffizzi + Kubernetes)'
 author: 'Adam Vollrath'
-# branding:
-#   color: 'yellow'
-#   icon: 'upload-cloud'
+branding:
+  color: 'yellow'
+  icon: 'upload-cloud'
 inputs:
   id:
     description: 'Deployment ID string'
