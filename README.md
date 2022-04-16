@@ -1,6 +1,6 @@
-# Uffizzi Preview docker action
+# Delete Full-Stack Preview Environment on K8s
 
-This action deletes a deployed Uffizzi Preview.
+Uses Open Source Uffizzi CLI `uffizzi preview delete` to delete on-demand, ephemeral test environment deployed onto your Kubernetes cluster.
 
 ## Inputs
 
