@@ -1,5 +1,5 @@
-name: 'Delete Uffizzi Preview'
-description: 'Delete a deployed Preview from Uffizzi'
+name: 'Delete Preview Environment'
+description: 'Delete a Full-Stack Preview Environment (on-demand, ephemeral) with Uffizzi Open Source (Compose + Uffizzi + Kubernetes)'
 author: 'Adam Vollrath'
 # branding:
 #   color: 'yellow'
