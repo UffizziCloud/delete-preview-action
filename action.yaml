@@ -14,7 +14,7 @@ inputs:
     default: 'https://app.uffizzi.com'
   username:
     description: 'Uffizzi username'
-    required: galse
+    required: false
   password:
     description: 'Uffizzi password'
     required: false
