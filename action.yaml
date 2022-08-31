@@ -14,16 +14,22 @@ inputs:
     default: 'https://app.uffizzi.com'
   username:
     description: 'Uffizzi username'
-    required: true
+    required: false
   password:
     description: 'Uffizzi password'
-    required: true
+    required: false
   project:
     description: 'Uffizzi project name'
-    required: true
+    required: false
+  request-token:
+    descrption: 'A token to access the pipeline information'
+    required: false
+  request-token-url:
+    descrption: 'A url where the pipeline information can be accessed'
+    required: false
 runs:
   using: 'docker'
-  image: 'docker://uffizzi/cli:2022-04-12'
+  image: 'docker://uffizzi/cli:v1'
   args:
     - 'preview'
     - 'delete'
@@ -33,3 +39,5 @@ runs:
     UFFIZZI_SERVER: ${{ inputs.server }}
     UFFIZZI_USER: ${{ inputs.username }}
     UFFIZZI_PROJECT: ${{ inputs.project }}
+    REQUEST_TOKEN: ${{ inputs.request-token }}
+    REQUEST_TOKEN_URL: ${{ inputs.request-token-url }}
