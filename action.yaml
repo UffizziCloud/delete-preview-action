@@ -19,7 +19,7 @@ inputs:
     description: 'Uffizzi password'
     required: false
   project:
-    description: 'Uffizzi project name'
+    description: 'Uffizzi project slug'
     required: false
   request-token:
     descrption: 'A token to access the pipeline information'
