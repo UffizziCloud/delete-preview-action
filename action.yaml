@@ -27,6 +27,10 @@ inputs:
   request-token-url:
     descrption: 'A url where the pipeline information can be accessed'
     required: false
+  logger-key:
+    description: 'Logger key'
+    required: false
+
 runs:
   using: 'docker'
   image: 'docker://uffizzi/cli:v1'
@@ -41,3 +45,5 @@ runs:
     UFFIZZI_PROJECT: ${{ inputs.project }}
     REQUEST_TOKEN: ${{ inputs.request-token }}
     REQUEST_TOKEN_URL: ${{ inputs.request-token-url }}
+    CI_WORKFLOW: "true"
+    LOGGER_KEY: ${{ inputs.logger-key }}
