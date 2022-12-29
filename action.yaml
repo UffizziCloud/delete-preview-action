@@ -33,7 +33,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'docker://uffizzi/cli:pr-201'
+  image: 'docker://uffizzi/cli:v1'
   args:
     - 'preview'
     - 'delete'
